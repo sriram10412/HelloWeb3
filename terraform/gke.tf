@@ -2,7 +2,7 @@
 module "gke" {
   source              = "terraform-google-modules/kubernetes-engine/google"
   cluster_name        = "my-gke-cluster"
-  project_id          = "your-gcp-project-id"
+  project_id          = "MY_FIRST_GCP"
   region              = "us-central1"
   network             = module.vpc.network_name
   subnetwork          = module.vpc.subnetwork_name
