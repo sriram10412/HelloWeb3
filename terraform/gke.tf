@@ -3,7 +3,7 @@ module "gke" {
   source              = "terraform-google-modules/kubernetes-engine/google"
   cluster_name        = "my-gke-cluster"
   project_id          = "MY_FIRST_GCP"
-  region              = "us-central1"
+  region              = "asia-southeast1-c"
   network             = module.vpc.network_name
   subnetwork          = module.vpc.subnetwork_name
   ip_range_pods       = module.vpc.pod_ip_range
