@@ -61,3 +61,8 @@ This challenge involves deploying a Node.js application that monitors the Polygo
 - Submit the repository URL upon completion.
 
 Good luck!
+
+
+
+
+Thanks for this opportunity . I tried upto my knowledge and i can realize still i need to complete lot of test. Since i am new to GCP and GKE clusters , i am not having much idea to resolve them. 
