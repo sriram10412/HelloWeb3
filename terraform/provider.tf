@@ -1,6 +1,6 @@
 locals {
-  project_id = "YOUR_PROJECT_ID"
-  region     = "YOUUR_REGION"
+  project_id = "MY_FIRST_GCP"
+  region     = "asia-southeast1-c"
   default_labels = {
     managed-by = "terraform"
   }
@@ -15,10 +15,7 @@ terraform {
     }
   }
 
-  backend "gcs" {
-    bucket = "YOUR_BUCKET"
-  }
-}
+ }
 
 
 provider "google" {
