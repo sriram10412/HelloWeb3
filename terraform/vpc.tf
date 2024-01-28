@@ -12,5 +12,4 @@ resource "google_compute_subnetwork" "my_first_subnet" {
   region                   = "asia-southeast1-c"
 
 }
-
 ###Aditional configuration candidate might fined usefull to add
