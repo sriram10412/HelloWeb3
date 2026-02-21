@@ -1,0 +1,38 @@
+# Default values for HelloWeb3
+
+# This is a YAML file that contains the configuration for the Helm chart.
+
+# Global settings
+global:
+  image:
+    repository: my-image-repo
+    tag: my-image-tag
+
+# Service settings
+service:
+  enabled: true
+  name: hello-service
+  type: ClusterIP
+  port: 80
+
+# Ingress settings
+ingress:
+  enabled: false
+  host: chart-example.local
+  path: /
+
+# Resources
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+# Environment variables
+env:
+  - name: NODE_ENV
+    value: production
+
+# Additional configurations can be added here.
