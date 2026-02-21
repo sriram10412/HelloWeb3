@@ -1,15 +1,34 @@
-resource "google_compute_network" "my_first_vpc" {
-  name                    = "my_first_vpc"
-  routing_mode            = "REGIONAL"
-  auto_create_subnetworks = false
+# VPC Configuration
+
+provider "aws" {
+  region = "us-east-1"
 }
 
-resource "google_compute_subnetwork" "my_first_subnet" {
-  name                     = "my_first_subnet"
-  ip_cidr_range            = "10.0.1.0/24"
-  network                  = google_compute_network.my_first_vpc.self_link
-  private_ip_google_access = true
-  region                   = "asia-southeast1-c"
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
 
+  tags = {
+    Name = "main-vpc"
+  }
 }
-###Aditional configuration candidate might fined usefull to add
+
+# Subnet Configuration
+resource "aws_subnet" "subnet1" {
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-east-1a"
+
+  tags = {
+    Name = "subnet1"
+  }
+}
+
+resource "aws_subnet" "subnet2" {
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.2.0/24"
+  availability_zone = "us-east-1b"
+
+  tags = {
+    Name = "subnet2"
+  }
+}
