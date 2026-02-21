@@ -1,0 +1,9 @@
+# HelloWeb3 Helm Chart
+
+apiVersion: v2
+name: hello-web3
+description: A Helm chart for Kubernetes
+version: 0.1.0
+appVersion: "1.0"
+
+# Dependency management, if necessary, can be added here
